@@ -1,0 +1,9 @@
+[package]
+name = "ciyana-shell-bin"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+compio = "0.18.0"
+gtk = { version = "0.11.1", package = "gtk4", features = ["v4_20"] }
+kanal = "0.1.1"
