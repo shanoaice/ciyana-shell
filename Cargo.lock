@@ -102,6 +102,9 @@ dependencies = [
 [[package]]
 name = "ciyana-shell-core"
 version = "0.1.0"
+dependencies = [
+ "kanal",
+]
 
 [[package]]
 name = "ciyana-shell-wayland"
