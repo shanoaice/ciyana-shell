@@ -94,6 +94,8 @@ checksum = "613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724"
 name = "ciyana-shell-bin"
 version = "0.1.0"
 dependencies = [
+ "ciyana-shell-core",
+ "ciyana-shell-wayland",
  "compio",
  "gtk4",
  "kanal",
@@ -111,7 +113,12 @@ dependencies = [
 name = "ciyana-shell-wayland"
 version = "0.1.0"
 dependencies = [
+ "ciyana-shell-core",
+ "kanal",
  "wayland-client",
+ "wayland-protocols",
+ "wayland-protocols-wlr",
+ "wayland-server",
 ]
 
 [[package]]
@@ -1318,6 +1325,33 @@ dependencies = [
 ]
 
 [[package]]
+name = "wayland-protocols"
+version = "0.32.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "563a85523cade2429938e790815fd7319062103b9f4a2dc806e9b53b95982d8f"
+dependencies = [
+ "bitflags",
+ "wayland-backend",
+ "wayland-client",
+ "wayland-scanner",
+ "wayland-server",
+]
+
+[[package]]
+name = "wayland-protocols-wlr"
+version = "0.3.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "eb04e52f7836d7c7976c78ca0250d61e33873c34156a2a1fc9474828ec268234"
+dependencies = [
+ "bitflags",
+ "wayland-backend",
+ "wayland-client",
+ "wayland-protocols",
+ "wayland-scanner",
+ "wayland-server",
+]
+
+[[package]]
 name = "wayland-scanner"
 version = "0.31.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1326,6 +1360,19 @@ dependencies = [
  "proc-macro2",
  "quick-xml",
  "quote",
+]
+
+[[package]]
+name = "wayland-server"
+version = "0.31.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cc1846eb04c49182e04f4a099e2a830a2b745610bbc1d61246e206f29c7000a0"
+dependencies = [
+ "bitflags",
+ "downcast-rs",
+ "rustix",
+ "wayland-backend",
+ "wayland-scanner",
 ]
 
 [[package]]

@@ -7,3 +7,5 @@ edition = "2024"
 compio = "0.18.0"
 gtk = { version = "0.11.1", package = "gtk4", features = ["v4_20"] }
 kanal = "0.1.1"
+ciyana-shell-core = { path = "../ciyana-shell-core" }
+ciyana-shell-wayland = { path = "../ciyana-shell-wayland" }
